@@ -19,32 +19,32 @@ def indexBase():
 def index():
     return (f"Hello World.. File name:{__name__}")
 
+
 @app.route("/this")
 def indexx():
     return("Thisisjk")
 
+
 @app.route("/<string:name>")
 def hello(name):    
-    return render_template("error.html") 
+    return render_template("error.html", error=name)
+
 
 @app.route("/temp")
 def indexxx():
-    return render_template("index.html")
+    return render_template("indexBase.html", valuess=[])
 
-@app.route("/helloo",methods=["POST","GET"])
+@app.route("/helloo", methods=["POST","GET"])
 def helloo():
     if request.method == "POST":     
         name = request.files["name"]    
         try:
-            df = pd.read_csv(name)
-            
-        except :
+            df = pd.read_csv(name)            
+        except:
             print("Error")
             pass
         
-        #session["alist"].append(name)    
-        return render_template("index.html",hd="Redirected", values = df,
-        tableheads=df.columns ,alist=df.iloc[0])
-    # session.get("alist"))
+        return render_template("index.html", valuess = df,
+        tableheads=df.columns)
     else:
         return ("Get Request dealt with.")

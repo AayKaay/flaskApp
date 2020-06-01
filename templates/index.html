@@ -1,5 +1,4 @@
-<! — “Child Template” →
-{% extends “base.html” %}
+{% extends "base.html" %}
  {% block body %}
       <form action="{{url_for('helloo')}}"  method="POST" enctype="multipart/form-data" style=" margin-left: 20%;">
         <input type="file" name="name" placeholder="Upload a csv file">
@@ -11,17 +10,17 @@
         <tr>
           {% for tablehead in tableheads %}
             <th scope="col">
-                {{tablehead}}
+                {{ tablehead }}
             </th>
           {% endfor%}
         </tr>
-        {%for key,value in values.iterrows()%}
+        {% for key,value in valuess.iterrows() %}
         <tr>
-          {%for val in value%}
-          <td  >{{val}}</td>
+          {% for val in value %}
+          <td  >{{ val }}</td>
           {%endfor%}
         </tr>
-        {%endfor%}
+        {% endfor %}
         
       </table>
       </div>

@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <Title>My webpage</Title>
-  
-
-</head>
-<body>
-    <p>S</p>
-</body>
-</html>
+{% extends "base.html" %}
+ {% block body %}
+      <form action="{{url_for('helloo')}}"  method="POST" enctype="multipart/form-data" style=" margin-left: 20%;">
+        <input type="file" name="name" placeholder="Upload a csv file">
+        <button>Submit</button>
+      </form>
+    </diV>
+{% endblock %}
