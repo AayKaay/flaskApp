@@ -1,6 +1,13 @@
 {% extends "base.html" %}
+{% block head %}
+{% endblock %}
  {% block body %}
-      <form action="{{url_for('helloo')}}"  method="POST" enctype="multipart/form-data" style=" margin-left: 20%;">
+ <div style="padding:10px; color: aliceblue;">
+<h1 style="margin-top: auto;" >
+  Upload your file :)
+</h1>
+</div>
+      <form action="{{url_for('helloo')}}"  method="POST" enctype="multipart/form-data" style=" margin-left: 1%;">
         <input type="file" name="name" placeholder="Upload a csv file">
         <button>Submit</button>
       </form>

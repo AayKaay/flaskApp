@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <style type="text/css" > 
+        .imgback{
+          color: aqua;
+        }
         body {
-            background-image: url("AK.png");
+            background-image: url("https://img.freepik.com/free-vector/technology-banner-background-with-hexagonal-shapes-text-space_1017-22589.jpg?size=626&ext=jpg");
             background-attachment: fixed; 
             background-position: top right;
             background-repeat: no-repeat;
@@ -25,6 +28,9 @@
             text-align: left;
             padding: 8px;
         }
+        tr{
+          background-color: darkslategrey;
+        }
 
         tr:nth-child(even) {
             background-color: #dddddd;
@@ -32,7 +38,7 @@
     </style>
 </head>
 <body>
-    {% block body %}
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Grapher</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +50,7 @@
       </div>
     </nav>
     <diV>
- 
+ {% block body %}
  {% endblock %}
 </body>
 </html>

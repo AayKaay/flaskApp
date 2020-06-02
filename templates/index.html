@@ -1,11 +1,13 @@
 {% extends "base.html" %}
+{% block head %}
+{% endblock %}
  {% block body %}
       <form action="{{url_for('helloo')}}"  method="POST" enctype="multipart/form-data" style=" margin-left: 20%;">
         <input type="file" name="name" placeholder="Upload a csv file">
         <button>Submit</button>
       </form>
     </diV>
-    <div style="overflow-x:auto;">
+    <div style="overflow-x:scroll;">
       <table class="table">
         <tr>
           {% for tablehead in tableheads %}
